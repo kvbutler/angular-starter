@@ -20,7 +20,7 @@ phases:
       - npm run build:prod
   post_build:
     commands:
-      - Build completed
+      - echo Build completed
 artifacts:
   files:
     - dist/**/*

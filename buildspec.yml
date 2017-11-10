@@ -1,0 +1,22 @@
+version: 0.2
+            
+phases:
+  install:
+    commands:
+      - echo Provisioning build server
+      - apt-get update -y
+      - apt-get -y nodejs
+  pre_build:
+    commands:
+      - echo Pulling app dependencies
+      - npm install
+  build:
+    commands:
+      - echo Building app
+      - npm run build:prod
+  post_build:
+    commands:
+      - Build completed
+artifacts:
+  files:
+    - dist/**/*

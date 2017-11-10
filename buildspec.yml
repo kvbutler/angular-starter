@@ -4,8 +4,8 @@ phases:
   install:
     commands:
       - echo Provisioning build server
-      - apt-get update -f
-      - apt-get install -f nodejs
+      - sudo apt-get update && sudo apt-get -y upgrade
+      - apt-get install -y nodejs
   pre_build:
     commands:
       - echo Pulling app dependencies

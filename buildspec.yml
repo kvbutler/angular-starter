@@ -21,6 +21,9 @@ phases:
   post_build:
     commands:
       - echo Build completed
+      - echo Deploying site
+      - aws s3 rm s3://statics3site-websitebucket-1o5zqhu8n1owo/ --recursive
+      - aws s3 cp --recursive --acl public-read ./dist s3://statics3site-websitebucket-1o5zqhu8n1owo/
 artifacts:
   files:
     - dist/**/*

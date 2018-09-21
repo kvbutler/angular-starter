@@ -45,7 +45,7 @@ import { AppState } from './app.service';
     <main>
       <router-outlet></router-outlet>
     </main>
-    <p>hELO</p>
+    <p>🤯🤯🤯</p>
     <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
 
     <footer>
@@ -65,7 +65,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     public appState: AppState
-  ) {}
+  ) { }
 
   public ngOnInit() {
     console.log('Initial App State', this.appState.state);
